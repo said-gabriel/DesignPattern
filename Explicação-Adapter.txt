@@ -1,0 +1,2 @@
+A classe "ClienteExemplo" quer utilizar os métodos de "ClienteExistente".Com isso, é criada uma interface "Adaptador", que implementa a "operação()" na qual "ClienteExemplo" deseja realizar. A partir disso, a classe "Alvo" implementa "Adaptador"
+e herda "ClienteExistente" tendo acesso assim, aos métodos de "ClienteExistente" que são utilizados em "operacao();". Com isso, basta "ClienteExemplo" instanciar "Alvo" para ter acesso a "operação();" e consequentemente aos métodos de "ClienteExistente".
