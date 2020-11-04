@@ -14,12 +14,8 @@ public class Unica {
     private static Unica instancia = null;
     private String mensagem;
 
-    private Unica() {
-
-    }
-
     public static Unica getInstancia() {
-        if (instancia.equals(null)) {
+        if (instancia == null) {
             instancia = new Unica();
         }
         return instancia;
