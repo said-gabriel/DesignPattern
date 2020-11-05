@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.strategy.model;
+package com.mycompany.chainresponsability.model;
 
-import com.mycompany.strategy.interfaces.Estrategia;
-
+import com.mycompany.chainresponsability.interfaces.Estrategia;
 
 /**
  *
@@ -21,18 +20,7 @@ public class Batalha {
     }
 
     public void definirEstrategia(String codigoBatalha) {
-        if (codigoBatalha.equals("cerco")) {
-            this.estrategia = new Cerco();
-        }
-        if (codigoBatalha.equals("atacar norte")) {
-            this.estrategia = new AtacarNorte();
-        }
-        if (codigoBatalha.equals("diplomacia")) {
-            this.estrategia = new Diplomacia();
-        }
-        if (codigoBatalha.equals("aliança")) {
-            this.estrategia = new AliancaVizinho();
-        }
+        this.estrategia = definir(codigoBatalha);
 
     }
 
@@ -44,4 +32,14 @@ public class Batalha {
         estrategia.concluir();
     }
 
+    private Estrategia definir(String cod) {
+        //Estrategia h1 = new AliancaVizinho(null);
+        //Estrategia h2 = new AtacarNorte((AliancaVizinho) h1);
+        Estrategia h3 = new Cerco(null);
+        Estrategia h4 = new Diplomacia((Cerco) h3);
+
+        Estrategia definitiva = h4.verifica(cod);
+
+        return definitiva;
+    }
 }
