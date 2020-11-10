@@ -1,0 +1,6 @@
+br\ufes\state\models\Revisao.class
+br\ufes\state\models\Artigo.class
+br\ufes\state\main\Principal.class
+br\ufes\state\models\Estado.class
+br\ufes\state\models\Publicacao.class
+br\ufes\state\models\Rascunho.class
