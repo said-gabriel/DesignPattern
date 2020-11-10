@@ -1,0 +1,5 @@
+br\ufes\factorymethod\models\Mensagem.class
+br\ufes\factorymethod\models\MensagemFabrica.class
+br\ufes\fectorymethod\interfaces\IMensagem.class
+br\ufes\factorymethod\main\Principal.class
+br\ufes\fectorymethod\interfaces\IFabrica.class
